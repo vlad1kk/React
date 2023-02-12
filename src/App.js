@@ -8,11 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Fcomponent/>
-        <Ccomponent number = "345"
-        // для передачі масиву:<Ccomponent numbers = {["1,2,3,4,5"]}/>
-        />
-        <Menu/>
+        <Ccomponent name = 'Igor' />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Vlad Tipukhov
@@ -23,7 +19,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Vlad Tipukhovf
+          Vlad Tipukhov
         </a>
       </header>
     </div>
