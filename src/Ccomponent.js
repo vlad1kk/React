@@ -7,7 +7,7 @@ export default class Ccomponent extends Component {
     
       this.state = {
         input:'',
-        submit:'',
+        items: []
 
       }
       this.handleChange = this.handleChange.bind(this);
@@ -22,7 +22,8 @@ export default class Ccomponent extends Component {
         //Event.preventDefault() - зупиняє подію браузера.
         event.preventDefault();
         this.setState({
-            submit: this.state.input
+            input: this.state.input,
+            items: [...this.state.items, this.state.input]
         });
     }
 
@@ -35,7 +36,11 @@ export default class Ccomponent extends Component {
                     <button type='sybmit'>Submit!</button>
                     
                 </form>
-                <h3>{this.state.submit}</h3>
+                <ul>
+                    {this.state.items.map((item,index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
             </div>
           );
   }
